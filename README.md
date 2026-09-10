@@ -11,7 +11,7 @@ This is the Windows edition of [AI-Cockpit for macOS](https://apps.apple.com/app
 It is **free**.
 
 **This repository carries the downloads and nothing else.** There is no source
-code here: it is shared with the paid macOS edition and stays closed.
+code here: it is shared with the macOS edition and stays closed.
 
 ## Download
 

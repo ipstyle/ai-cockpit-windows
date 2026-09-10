@@ -11,7 +11,7 @@ Das ist die Windows-Fassung von [AI-Cockpit für macOS](https://apps.apple.com/a
 Sie ist **gratis**.
 
 **Dieses Repo trägt die Downloads und sonst nichts.** Quellcode steht hier
-keiner: Er ist derselbe wie bei der kostenpflichtigen macOS-Fassung und bleibt
+keiner: Er ist derselbe wie bei der macOS-Fassung und bleibt
 geschlossen.
 
 ## Herunterladen
