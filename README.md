@@ -4,8 +4,8 @@
 
 All your AI limits in one place, in the notification area of the taskbar —
 Claude, ChatGPT/Codex, the OpenAI and Anthropic APIs, Kimi K3, OpenRouter,
-Grok (xAI), GitHub Copilot, and your running Claude Code sessions. Eight
-services, up to ten cards — Claude counts twice if you keep a second account.
+Grok (xAI), GitHub Copilot, DeepSeek, and your running Claude Code sessions.
+Nine services, up to eleven cards — Claude counts twice if you keep a second account.
 
 This is the Windows edition of [AI Cockpit for macOS](https://apps.apple.com/app/id6802014255).
 It is **free**.
@@ -36,7 +36,7 @@ If you would rather check first, every release ships a `.sha256` file next to
 the executable:
 
 ```
-certutil -hashfile AI-Cockpit-1.3.0-win-arm64.exe SHA256
+certutil -hashfile AI-Cockpit-1.6.0-win-arm64.exe SHA256
 ```
 
 The warning says nothing about the contents, only about how widespread the file
@@ -44,36 +44,25 @@ is, and it disappears once enough people have downloaded it. Note that some
 managed company machines block unsigned executables outright — there no click
 helps.
 
-## What's new in 1.3
+## What's new in 1.6
 
-This is a snapshot release, aimed at feature parity with macOS 6.5 — not a
-running twin of it. The full list is in the in-app changelog; the headlines:
+The full list is in the release notes; the headlines:
 
-- **GitHub Copilot** as an eighth service, with its own card — premium
-  requests this month, covered by the plan, billed extra. Personal paid plans
-  only; an organization or enterprise seat cannot be told apart from "nothing
-  used yet" on GitHub's side, so the card says so plainly instead of guessing.
-- **ChatGPT sign-in inside the app**, with live quota and a credit balance —
-  no more relying solely on the local Codex installation.
-- **Provider status.** A card whose provider is down shows a line with a link
-  to the status page, and a coloured dot on the tray icon flags it even with
-  the panel closed.
-- **A total-cost line** — subscription fees plus the running API costs, one
-  figure above the cards.
-- **A segment switch** above the cards (all / limits / cost / sessions).
-- **No more dead "Retry".** A rejected key or expired sign-in now points
-  straight at the right settings page instead of a button that never helps.
-- **Demo mode is complete** — sample sessions, a sample ChatGPT balance and a
-  Kimi quota are included; it no longer leaks your real, local Claude Code
-  sessions while turned on.
-- Every provider colour re-measured against macOS 6.5, plus a colour for
-  Copilot.
+- **Accounts as an overview** — one row per service with a status pill, and a
+  page of its own for each, with sign-in and sign-out for Claude, Claude 2 and
+  ChatGPT, and a link to where the key comes from.
+- **Search in the settings**, in English and German.
+- **GitHub outages for Copilot**, from the public status page
+  `www.githubstatus.com`.
+- Everything now lives in one folder, `%APPDATA%\AI-Cockpit` (moved once from
+  `%APPDATA%\AI Dock`). The English interface is English throughout, only one
+  instance runs at a time, and the figures are fresh right after standby.
 
 ## Early builds
 
 The current release **has never been run.** It is built and compiled on a Mac,
 where WPF does not run. What is verified is everything that can be verified
-without a running program: the whole solution compiles including XAML, the
+without a running program: the whole solution compiles including XAML, 1247
 core tests pass, and a differential tool proves the Windows core computes byte
 for byte what the macOS core computes.
 
@@ -105,5 +94,5 @@ also go through this repository's issues.
 ## Not affiliated
 
 AI-Cockpit is an independent app and is not affiliated with Anthropic, OpenAI,
-Moonshot AI, OpenRouter, xAI or GitHub. Those names appear solely to describe
+Moonshot AI, OpenRouter, xAI, GitHub or DeepSeek. Those names appear solely to describe
 which services the app can read.

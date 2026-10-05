@@ -4,8 +4,8 @@
 
 Alle KI-Limits an einem Ort, im Infobereich der Taskleiste — Claude,
 ChatGPT/Codex, die OpenAI- und Anthropic-Schnittstellen, Kimi K3, OpenRouter,
-Grok (xAI) und die laufenden Claude-Code-Sitzungen. Sieben Dienste, bis zu neun
-Karten — Claude zählt doppelt, wenn ein zweites Konto eingerichtet ist.
+Grok (xAI), GitHub Copilot, DeepSeek und die laufenden Claude-Code-Sitzungen.
+Neun Dienste, bis zu elf Karten — Claude zählt doppelt, wenn ein zweites Konto eingerichtet ist.
 
 Das ist die Windows-Fassung von [AI-Cockpit für macOS](https://apps.apple.com/app/id6802014255).
 Sie ist **gratis**.
@@ -38,7 +38,7 @@ Wer lieber vorher prüft: Zu jeder Fassung liegt eine `.sha256`-Datei neben der
 Anwendung.
 
 ```
-certutil -hashfile AI-Cockpit-1.2.0-win-arm64.exe SHA256
+certutil -hashfile AI-Cockpit-1.6.0-win-arm64.exe SHA256
 ```
 
 Die Warnung sagt nichts über den Inhalt aus, nur über die Verbreitung, und
@@ -46,11 +46,26 @@ verschwindet von selbst, sobald die Datei oft genug heruntergeladen wurde.
 Manche verwalteten Firmenrechner blockieren unsignierte Anwendungen allerdings
 hart — da hilft kein Klick.
 
+## Neu in 1.6
+
+Die ganze Liste steht in den Release-Notizen; das Wichtigste:
+
+- **Konten als Übersicht** — eine Zeile je Dienst mit Statuspille und eine
+  eigene Seite je Dienst, mit An- und Abmelden für Claude, Claude 2 und
+  ChatGPT und einem Link dorthin, wo es den Schlüssel gibt.
+- **Suche in den Einstellungen**, auf Deutsch und Englisch.
+- **GitHub-Störungen für Copilot**, über die öffentliche Statusseite
+  `www.githubstatus.com`.
+- Alles liegt jetzt in einem Ordner, `%APPDATA%\AI-Cockpit` (einmal umgezogen
+  aus `%APPDATA%\AI Dock`). Die englische Oberfläche ist durchgehend englisch,
+  es läuft nur noch eine App gleichzeitig, und nach dem Standby sind die Zahlen
+  sofort frisch.
+
 ## Frühe Fassungen
 
 Die aktuelle Fassung **wurde nie ausgeführt.** Sie ist auf einem Mac gebaut und
 übersetzt worden; WPF läuft dort nicht. Geprüft ist, was sich ohne laufendes
-Programm prüfen lässt: Die gesamte Projektmappe übersetzt samt XAML, 330 Tests
+Programm prüfen lässt: Die gesamte Projektmappe übersetzt samt XAML, 1247 Tests
 des Kerns laufen durch, und ein Vergleichswerkzeug beweist, dass der
 Windows-Kern Byte für Byte dasselbe rechnet wie der macOS-Kern.
 
@@ -72,8 +87,15 @@ sagt je Karte, was ihr Zustand ist, und enthält keinen einzigen Schlüssel.
   verschlüsselt mit dem Benutzerkonto und nur auf diesem Rechner. Es gibt keinen
   Server, kein Konto beim Herausgeber und keine Messung.
 
+## Hilfe und Rückmeldung
+
+Fragen, Probleme oder Wünsche: **[aicockpit.info](https://aicockpit.info/de/)**
+— die Heimat des Projekts für alle vier Plattformen (Mac, iPhone/iPad/Apple
+Watch und Windows), mit einem Rückmeldeformular. Fehler in dieser Fassung
+lassen sich auch über die Issues dieses Repos melden.
+
 ## Keine Verbindung
 
 AI-Cockpit ist ein unabhängiges Programm und steht in keiner Verbindung zu
-Anthropic, OpenAI, Moonshot AI, OpenRouter oder xAI. Die genannten Namen dienen
+Anthropic, OpenAI, Moonshot AI, OpenRouter, xAI, GitHub oder DeepSeek. Die genannten Namen dienen
 ausschliesslich der Beschreibung, welche Dienste die App auslesen kann.
