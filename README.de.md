@@ -38,7 +38,7 @@ Wer lieber vorher prüft: Zu jeder Fassung liegt eine `.sha256`-Datei neben der
 Anwendung.
 
 ```
-certutil -hashfile AI-Cockpit-1.6.0-win-arm64.exe SHA256
+certutil -hashfile AI-Cockpit-1.7.0-win-arm64.exe SHA256
 ```
 
 Die Warnung sagt nichts über den Inhalt aus, nur über die Verbreitung, und
@@ -46,26 +46,29 @@ verschwindet von selbst, sobald die Datei oft genug heruntergeladen wurde.
 Manche verwalteten Firmenrechner blockieren unsignierte Anwendungen allerdings
 hart — da hilft kein Klick.
 
-## Neu in 1.6
+## Neu in 1.7
 
-Die ganze Liste steht in den Release-Notizen; das Wichtigste:
+Die ganze Liste steht in den Release-Notizen; das Wichtigste (die Funktionen der Mac-App 7.3 und 7.4):
 
-- **Konten als Übersicht** — eine Zeile je Dienst mit Statuspille und eine
-  eigene Seite je Dienst, mit An- und Abmelden für Claude, Claude 2 und
-  ChatGPT und einem Link dorthin, wo es den Schlüssel gibt.
-- **Suche in den Einstellungen**, auf Deutsch und Englisch.
-- **GitHub-Störungen für Copilot**, über die öffentliche Statusseite
-  `www.githubstatus.com`.
-- Alles liegt jetzt in einem Ordner, `%APPDATA%\AI-Cockpit` (einmal umgezogen
-  aus `%APPDATA%\AI Dock`). Die englische Oberfläche ist durchgehend englisch,
-  es läuft nur noch eine App gleichzeitig, und nach dem Standby sind die Zahlen
-  sofort frisch.
+- **Keine Überraschungen** — eine Mitteilung, wenn ein Fenster früher als
+  geplant zurückgesetzt wird, und ein Kosten-Alarm, wenn das Guthaben bei
+  OpenRouter, DeepSeek oder Kimi schnell sinkt oder die Tageskosten bei
+  OpenAI/Anthropic springen.
+- **Abo-Check** — der API-Gegenwert deiner Claude-Code-Nutzung gegen den
+  Abopreis, dazu ein Blick auf die Wochenspitzen («Max 5× würde wohl reichen»).
+- **Für Entwickler** — auf Wunsch der Stand für die Statuszeile von Claude Code
+  (`stand.json` + `statusline.ps1`, standardmässig aus, ohne Schlüssel und
+  Kontonamen) und die Mitteilung «Claude ist fertig».
+- **Klarheit** — ein Satz zur Lage oben im Panel, ein Tipp, welches Konto oder
+  welcher Dienst noch Luft hat, und (i)-Knöpfe, die die Begriffe erklären.
+- **Dein Aussehen** — Farbschemata Graphit (neuer Standard), Tiefblau und
+  Klassisch, eine Farbe je Abo und «Als Bild teilen» ohne Kontonamen.
 
 ## Frühe Fassungen
 
 Die aktuelle Fassung **wurde nie ausgeführt.** Sie ist auf einem Mac gebaut und
 übersetzt worden; WPF läuft dort nicht. Geprüft ist, was sich ohne laufendes
-Programm prüfen lässt: Die gesamte Projektmappe übersetzt samt XAML, 1247 Tests
+Programm prüfen lässt: Die gesamte Projektmappe übersetzt samt XAML, 1506 Tests
 des Kerns laufen durch, und ein Vergleichswerkzeug beweist, dass der
 Windows-Kern Byte für Byte dasselbe rechnet wie der macOS-Kern.
 
