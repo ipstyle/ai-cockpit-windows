@@ -38,7 +38,7 @@ Wer lieber vorher prüft: Zu jeder Fassung liegt eine `.sha256`-Datei neben der
 Anwendung.
 
 ```
-certutil -hashfile AI-Cockpit-1.7.0-win-arm64.exe SHA256
+certutil -hashfile AI-Cockpit-1.8.0-win-arm64.exe SHA256
 ```
 
 Die Warnung sagt nichts über den Inhalt aus, nur über die Verbreitung, und
@@ -46,29 +46,29 @@ verschwindet von selbst, sobald die Datei oft genug heruntergeladen wurde.
 Manche verwalteten Firmenrechner blockieren unsignierte Anwendungen allerdings
 hart — da hilft kein Klick.
 
-## Neu in 1.7
+## Neu in 1.8
 
-Die ganze Liste steht in den Release-Notizen; das Wichtigste (die Funktionen der Mac-App 7.3 und 7.4):
+Die ganze Liste steht in den Release-Notizen; das Wichtigste (die Funktionen der Mac-App 7.5 – «Dein Geld und deine Zeit im Griff»):
 
-- **Keine Überraschungen** — eine Mitteilung, wenn ein Fenster früher als
-  geplant zurückgesetzt wird, und ein Kosten-Alarm, wenn das Guthaben bei
-  OpenRouter, DeepSeek oder Kimi schnell sinkt oder die Tageskosten bei
-  OpenAI/Anthropic springen.
-- **Abo-Check** — der API-Gegenwert deiner Claude-Code-Nutzung gegen den
-  Abopreis, dazu ein Blick auf die Wochenspitzen («Max 5× würde wohl reichen»).
-- **Für Entwickler** — auf Wunsch der Stand für die Statuszeile von Claude Code
-  (`stand.json` + `statusline.ps1`, standardmässig aus, ohne Schlüssel und
-  Kontonamen) und die Mitteilung «Claude ist fertig».
-- **Klarheit** — ein Satz zur Lage oben im Panel, ein Tipp, welches Konto oder
-  welcher Dienst noch Luft hat, und (i)-Knöpfe, die die Begriffe erklären.
-- **Dein Aussehen** — Farbschemata Graphit (neuer Standard), Tiefblau und
-  Klassisch, eine Farbe je Abo und «Als Bild teilen» ohne Kontonamen.
+- **Abo-Kalender** — Verlängerungsdatum und Rhythmus je Abo (Claude, zweites
+  Claude-Konto, ChatGPT/Codex). Eine Mitteilung 1–7 Tage vorher (Standard 3)
+  um 09:00, auf Wunsch mit dem Abo-Check («Max 5× würde wohl reichen»), und
+  auf der Karte «Verlängert in 5 Tagen».
+- **Reset-Wecker** — die Glocke an einem Fenster: eine einzige Mitteilung, wenn
+  es wieder geht, auch beim Sonder-Reset. Kommt auch in der Ruhezeit.
+- **Tagesration** — «Heute noch 9 % frei, damit die Woche reicht» unter den
+  Wochenfenstern; abschaltbar.
+- **Ruhezeiten** — von–bis ohne Mitteilungen (Standard 22–07, aus), der
+  Kosten-Alarm darf auf Wunsch durch; «Pause bis morgen» im Menü des
+  Infobereichs.
+- **Dein KI-Monat** — am 1. ein Rückblick auf den Vormonat: Summe, Abos und API,
+  je Dienst, Vergleich mit dem Monat davor. Als PNG teilbar, ohne Kontonamen.
 
 ## Frühe Fassungen
 
 Die aktuelle Fassung **wurde nie ausgeführt.** Sie ist auf einem Mac gebaut und
 übersetzt worden; WPF läuft dort nicht. Geprüft ist, was sich ohne laufendes
-Programm prüfen lässt: Die gesamte Projektmappe übersetzt samt XAML, 1506 Tests
+Programm prüfen lässt: Die gesamte Projektmappe übersetzt samt XAML, 1606 Tests
 des Kerns laufen durch, und ein Vergleichswerkzeug beweist, dass der
 Windows-Kern Byte für Byte dasselbe rechnet wie der macOS-Kern.
 
