@@ -37,7 +37,7 @@ If you would rather check first, every release ships a `.sha256` file next to
 the executable:
 
 ```
-certutil -hashfile AI-Cockpit-1.8.0-win-arm64.exe SHA256
+certutil -hashfile AI-Cockpit-1.8.1-win-arm64.exe SHA256
 ```
 
 The warning says nothing about the contents, only about how widespread the file
@@ -46,6 +46,8 @@ managed company machines block unsigned executables outright — there no click
 helps.
 
 ## What's new in 1.8
+
+**1.8.1 (11 Oct 2026):** the OpenAI card works again. OpenAI now returns costs for the past year only and answered the old three-year request with HTTP 400; the app now reads one year and shows the reason when a service rejects a request.
 
 Your money and your time in check — a snapshot release with the features of
 macOS 7.5, not a running twin of it. The full list is in the release notes;

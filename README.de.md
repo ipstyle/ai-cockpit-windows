@@ -38,7 +38,7 @@ Wer lieber vorher prüft: Zu jeder Fassung liegt eine `.sha256`-Datei neben der
 Anwendung.
 
 ```
-certutil -hashfile AI-Cockpit-1.8.0-win-arm64.exe SHA256
+certutil -hashfile AI-Cockpit-1.8.1-win-arm64.exe SHA256
 ```
 
 Die Warnung sagt nichts über den Inhalt aus, nur über die Verbreitung, und
@@ -47,6 +47,8 @@ Manche verwalteten Firmenrechner blockieren unsignierte Anwendungen allerdings
 hart — da hilft kein Klick.
 
 ## Neu in 1.8
+
+**1.8.1 (11.10.2026):** Die OpenAI-Karte geht wieder. OpenAI liefert Kosten nur noch ein Jahr zurück und lehnte die alte Abfrage über drei Jahre mit HTTP 400 ab; die App liest jetzt ein Jahr und zeigt den Grund, wenn ein Dienst eine Abfrage ablehnt.
 
 Die ganze Liste steht in den Release-Notizen; das Wichtigste (die Funktionen der Mac-App 7.5 – «Dein Geld und deine Zeit im Griff»):
 
