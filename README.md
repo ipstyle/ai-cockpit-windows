@@ -5,7 +5,8 @@
 All your AI limits in one place, in the notification area of the taskbar —
 Claude, ChatGPT/Codex, the OpenAI and Anthropic APIs, Kimi K3, OpenRouter,
 Grok (xAI), GitHub Copilot, DeepSeek, and your running Claude Code sessions.
-Nine services, up to eleven cards — Claude counts twice if you keep a second account.
+Nine services, up to eleven cards — Claude counts twice if you keep a second
+account.
 
 This is the Windows edition of [AI Cockpit for macOS](https://apps.apple.com/app/id6802014255).
 It is **free**.
@@ -36,7 +37,7 @@ If you would rather check first, every release ships a `.sha256` file next to
 the executable:
 
 ```
-certutil -hashfile AI-Cockpit-1.7.0-win-arm64.exe SHA256
+certutil -hashfile AI-Cockpit-1.8.0-win-arm64.exe SHA256
 ```
 
 The warning says nothing about the contents, only about how widespread the file
@@ -44,30 +45,38 @@ is, and it disappears once enough people have downloaded it. Note that some
 managed company machines block unsigned executables outright — there no click
 helps.
 
-## What's new in 1.7
+## What's new in 1.8
 
-The full list is in the release notes; the headlines (the features of the Mac app 7.3 and 7.4):
+Your money and your time in check — a snapshot release with the features of
+macOS 7.5, not a running twin of it. The full list is in the release notes;
+the headlines:
 
-- **No surprises** — a notification when a window resets ahead of schedule,
-  and a cost alert when OpenRouter, DeepSeek or Kimi credit drops fast or
-  OpenAI/Anthropic daily costs jump.
-- **Plan check** — the API value of your Claude Code use against your plan
-  price, plus a check from your weekly peaks ("Max 5× would likely do").
-- **For developers** — optional status for Claude Code's status line
-  (`stand.json` + `statusline.ps1`, off by default, no keys or account names),
-  and a «Claude is done» notification.
-- **Clarity** — one sentence on where you stand at the top of the panel, a tip
-  which account or service still has room, and (i) buttons that explain the terms.
-- **Your look** — color schemes Graphite (new default), Deep Blue and Classic,
-  a color per subscription, and «Share as image» with account names hidden.
+- **Subscription calendar.** Enter the renewal date and cycle of each plan
+  (Settings › Display › Subscription costs). A few days ahead — 3 by default,
+  1 to 7 — a notification comes at 9:00 AM with the amount, and with a hint
+  if a smaller plan would likely do. In the last week the card shows «Renews
+  in 5 days (Oct 14)».
+- **Reset alarm.** A bell next to each window with a known reset. One
+  notification when it is free again — also when the provider resets early.
+- **Today's share.** Weekly windows split what is left across the days until
+  the reset: «9 % left for today so the week lasts». Can be turned off.
+- **Quiet hours** (10:00 PM to 7:00 AM by default, off until you turn them on)
+  with a switch to let cost alerts through, and **«Pause until tomorrow»** in
+  the tray icon's menu. The reset alarm always comes.
+- **Your AI month.** On the 1st, one notification sums up last month; a window
+  shows total, subscriptions and API per service, the month before and your
+  weekly load. «Share as image» uses fixed service names, never your account
+  names.
+
+Everything stays on your PC: three small new files with numbers and times, no
+new network destinations.
 
 ## Early builds
 
-The current release **has never been run.** It is built and compiled on a Mac,
-where WPF does not run. What is verified is everything that can be verified
-without a running program: the whole solution compiles including XAML, 1506
-core tests pass, and a differential tool proves the Windows core computes byte
-for byte what the macOS core computes.
+The current release **has never been run on real Windows.** It is built and
+compiled on a Mac, where WPF does not run. What is verified is everything that
+can be verified without a running program: the whole solution compiles
+including XAML, and 1606 tests (core, services, texts) pass.
 
 **Everything visible is unverified.** Read the release notes before you start
 it — they list what that means in practice.
