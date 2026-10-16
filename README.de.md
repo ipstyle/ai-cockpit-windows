@@ -38,13 +38,23 @@ Wer lieber vorher prüft: Zu jeder Fassung liegt eine `.sha256`-Datei neben der
 Anwendung.
 
 ```
-certutil -hashfile AI-Cockpit-1.8.1-win-arm64.exe SHA256
+certutil -hashfile AI-Cockpit-1.9.0-win-arm64.exe SHA256
 ```
 
 Die Warnung sagt nichts über den Inhalt aus, nur über die Verbreitung, und
 verschwindet von selbst, sobald die Datei oft genug heruntergeladen wurde.
 Manche verwalteten Firmenrechner blockieren unsignierte Anwendungen allerdings
 hart — da hilft kein Klick.
+
+## Neu in 1.9
+
+**1.9.0 (16.10.2026):** Die OpenAI-Karte hält durch, und eine neue Seite zeigt, was jeder Abruf getan hat.
+
+- **Kosten in kleinen Stücken.** Die App liest OpenAI-Kosten in Stücken von höchstens 31 Tagen, heute und den laufenden Monat zuerst. Eine unlesbare Antwort leert die Karte nicht mehr: Es fehlt nur der betroffene Tag, und die Karte sagt es («12.40 $ · 2 Tage fehlen, 118 werden nachgeholt»). Fehlende Tage zählen nie als 0 und werden später nachgeholt.
+- **Klare Fehlerzeile.** Statt «kein JSON-Objekt» nennt die Karte Endpunkt, Zeitraum und HTTP-Status — etwa «OpenAI: Antwort unlesbar · costs 18.04.–15.10. · HTTP 200 · 41 KB».
+- **Diagnose-Seite** (Einstellungen › Diagnose): eine Ampel je Quelle, die letzten 50 Abrufe mit Pfad, Zeitraum, Status, Dauer und Grösse, «Jetzt testen» mit den Schritten des echten Abrufs und ein Bericht zum Kopieren oder als fertige Mail an den Support. Der Bericht enthält keine Schlüssel und keine Konto-Kennungen, Beträge nur auf Wunsch. Die App sendet nie selbst.
+- **Keine stille Null.** Ein unlesbarer Betrag — bei jedem Dienst — erscheint als «unlesbarer Betrag», nie als 0. Budget und Kosten-Alarm urteilen nur, wenn der Monat vollständig ist.
+- **Weniger Anfragen.** Projektnamen werden sechs Stunden gemerkt, der erste Abruf holt weniger auf einmal.
 
 ## Neu in 1.8
 

@@ -37,13 +37,23 @@ If you would rather check first, every release ships a `.sha256` file next to
 the executable:
 
 ```
-certutil -hashfile AI-Cockpit-1.8.1-win-arm64.exe SHA256
+certutil -hashfile AI-Cockpit-1.9.0-win-arm64.exe SHA256
 ```
 
 The warning says nothing about the contents, only about how widespread the file
 is, and it disappears once enough people have downloaded it. Note that some
 managed company machines block unsigned executables outright — there no click
 helps.
+
+## What's new in 1.9
+
+**1.9.0 (16 Oct 2026):** the OpenAI card holds up, and a new page shows what each request did.
+
+- **Costs in small pieces.** OpenAI costs are read in chunks of up to 31 days, today and the current month first. A response that cannot be read no longer empties the card: only the affected day is missing, and the card says so («$12.40 · 2 days missing, 118 catching up»). Missing days never count as zero and are fetched again later.
+- **Clear error line.** Instead of «not a JSON object» the card names the endpoint, the period and the HTTP status — for example «OpenAI: unreadable response · costs 18 Apr–15 Oct · HTTP 200 · 41 KB».
+- **Diagnostics page** (Settings › Diagnostics): a status light per source, the last 50 requests with path, period, status, duration and size, «Test now» with the steps of the real request, and a report to copy or to open as a ready-made mail to support. The report holds no keys and no account IDs; amounts only if you switch them on. The app never sends anything by itself.
+- **No silent zeros.** An amount that cannot be read — from any service — shows as «unreadable amount», never as 0. Budget and cost alerts only judge when the month is complete.
+- **Fewer requests.** Project names are kept for six hours; the first run fetches less at once.
 
 ## What's new in 1.8
 
